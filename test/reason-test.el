@@ -326,6 +326,14 @@ let make keyInfo::k=? _children => {
 };
 "))
 
+(ert-deftest indent-raw-js ()
+  (test-indent
+   "
+[%%bs.raw {|
+console.log('some javascript');
+|}];
+"))
+
 (defun reason-get-buffer-pos (pos-symbol)
   "Get buffer position from POS-SYMBOL.
 
